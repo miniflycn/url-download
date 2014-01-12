@@ -1,0 +1,38 @@
+{
+  "name": "url-download",
+  "version": "0.0.3",
+  "description": "Download files from web",
+  "keywords": [
+    "url",
+    "http",
+    "https",
+    "download"
+  ],
+  "homepage": "http://miniflycn.github.io/url-download",
+  "repository": "git://github.com/miniflycn/url-download.git",
+  "author": "Daniel Yang <miniflycn@gmail.com>",
+  "main": "index",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "url-valid": "*",
+    "each-async": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "connect": "*",
+    "blanket": "*",
+    "coveralls": "*",
+    "mocha-lcov-reporter": "*",
+    "debug": "*"
+  },
+  "scripts": {
+    "test": "mocha",
+    "blanket": {
+      "pattern": "url-download/lib"
+    }
+  }
+}
