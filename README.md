@@ -9,10 +9,21 @@
    * return {EventEmitter}
    */
 
-  download('http://nodejs.org/dist/v0.10.28/node.exe', './download')
+  // for one file
+  download('https://raw.githubusercontent.com/miniflycn/url-download/master/index.js', './')
     .on('close', function () {
       console.log('One file has been downloaded.');
     });
+
+  // for some files
+  download([
+    'https://raw.githubusercontent.com/miniflycn/url-download/master/index.js',
+    'https://raw.githubusercontent.com/miniflycn/url-download/master/README.md'
+  ], './').on('close', function (err, url) {
+    console.log(url + ' has been downloaded.');
+  }).on('done', function () {
+    console.log('All files have been downloaded.');
+  });
 ```
 
 ## License
