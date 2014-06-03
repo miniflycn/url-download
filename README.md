@@ -1,5 +1,20 @@
 # url-download
 
+## Usage
+``` javascript
+  /** 
+   * download
+   * @param {String | Array} url
+   * @param {String} dest
+   * return {EventEmitter}
+   */
+
+  download('http://nodejs.org/dist/v0.10.28/node.exe', './download')
+    .on('close', function () {
+      console.log('One file has been downloaded.');
+    });
+```
+
 ## License
 (The MIT License)
 

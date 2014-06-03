@@ -1,6 +1,6 @@
 {
   "name": "url-download",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Download files from web",
   "keywords": [
     "url",
@@ -34,5 +34,9 @@
     "blanket": {
       "pattern": "url-download/lib"
     }
-  }
+  },
+  "files": [
+    "index.js",
+    "lib/download.js"
+  ]
 }
