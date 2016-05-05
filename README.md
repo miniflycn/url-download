@@ -24,6 +24,12 @@
   }).on('done', function () {
     console.log('All files have been downloaded.');
   });
+  
+  // invalid file
+  download('http://invalidurl.com/noexist.zip', './')
+    .on('invalid', function (e) {
+      console.log(e.url + ' is invalid');
+    })
 ```
 
 ## License
