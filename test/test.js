@@ -17,7 +17,19 @@ describe('download', function () {
         .on('done', function () {
           if (fs.existsSync('./baidu.html')) {
             done();
+            fs.unlinkSync('./baidu.html')
           }
         })
   });
+
+  it('should able to get the url and the file path', function (done) {
+    var url = 'https://www.baidu.com';
+      download(url, './', { outputName: 'test.html' })
+        .on('close', function (e, url, file) {
+          url.should.equal(url);
+          file.should.equal('test.html');
+          fs.unlinkSync('./test.html');
+          done();
+        })
+  })
 });
