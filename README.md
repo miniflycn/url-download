@@ -6,6 +6,7 @@
    * download
    * @param {String | Array} url
    * @param {String} dest
+   * @param {Object} options
    * return {EventEmitter}
    */
 
@@ -30,6 +31,12 @@
     .on('invalid', function (e) {
       console.log(e.url + ' is invalid');
     })
+
+  // change destination file name
+  download('http://url.com/some?long=query&with=parameters', './', {outputName:'my_file.jpg'})
+    .on('done', function () {
+    console.log('File saved as my_file.jpg');
+  });
 ```
 
 ## License
