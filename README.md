@@ -1,5 +1,7 @@
 # url-download
 
+[![Build Status](https://travis-ci.org/miniflycn/url-download.svg?branch=master)](https://travis-ci.org/miniflycn/url-download)
+
 ## Usage
 ``` javascript
   /** 
