@@ -1,3 +1,3 @@
 exports = module.exports = require('./lib/download');
 
-exports.version = '0.0.7';
+exports.version = '0.0.8';
